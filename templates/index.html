@@ -1,0 +1,144 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Image Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fake Image Detection System</h1>
+        </header>
+        
+        <section class="intro">
+            <h2>About Our Approach</h2>
+            <p>Our system uses two complementary approaches to detect fake images:</p>
+            <ul>
+                <li><strong>Bilateral High-Pass Filter (BiHPF):</strong> Analyzes the frequency domain characteristics of images to detect manipulation.</li>
+                <li><strong>Capsule Network:</strong> Focuses on spatial domain analysis using advanced neural network architecture.</li>
+            </ul>
+        </section>
+
+        <section class="upload-section">
+            <div class="upload-container">
+                <div id="drop-zone">
+                    <input type="file" id="file-input" accept=".jpg,.jpeg,.png" hidden>
+                    <div class="drop-zone-content">
+                        <p>Drag & Drop an image or</p>
+                        <button id="upload-btn">Choose File</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section" style="display: none;">
+            <h2>Analysis Results</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Uploaded Image</h3>
+                    <img id="uploaded-image" src="" alt="Uploaded image">
+                </div>
+                <div class="result-card">
+                    <h3>BiHPF Analysis</h3>
+                    <p>Result: <span id="bihpf-result"></span></p>
+                    <p>Confidence: <span id="bihpf-confidence"></span></p>
+                </div>
+                <div class="result-card">
+                    <h3>CapsNet Analysis</h3>
+                    <p>Result: <span id="capsnet-result"></span></p>
+                    <p>Confidence: <span id="capsnet-confidence"></span></p>
+                </div>
+                <div class="result-card final-result">
+                    <h3>Final Verdict</h3>
+                    <p>Result: <span id="final-result"></span></p>
+                    <p>Confidence: <span id="final-confidence"></span></p>
+                    <p>Based on: <span id="winning-method"></span></p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Image Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fake Image Detection System</h1>
+        </header>
+        
+        <section class="intro">
+            <h2>About Our Approach</h2>
+            <p>Our system uses three complementary approaches to detect fake images:</p>
+            <ul>
+                <li><strong>Bilateral High-Pass Filter (BiHPF):</strong> Analyzes frequency domain characteristics of images to detect manipulation.</li>
+                <li><strong>Capsule Network:</strong> Focuses on spatial domain analysis using advanced neural network architecture.</li>
+                <li><strong>Keras Model:</strong> A general-purpose neural network trained for image authenticity detection.</li>
+            </ul>
+        </section>
+
+        <section class="upload-section">
+            <div class="upload-container">
+                <div id="drop-zone">
+                    <input type="file" id="file-input" accept=".jpg,.jpeg,.png" hidden>
+                    <div class="drop-zone-content">
+                        <p>Drag & Drop an image or</p>
+                        <button id="upload-btn">Choose File</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section" style="display: none;">
+            <h2>Analysis Results</h2>
+            <div class="results-grid">
+                <!-- Uploaded Image Card -->
+                <div class="result-card">
+                    <h3>Uploaded Image</h3>
+                    <img id="uploaded-image" src="" alt="Uploaded image">
+                </div>
+
+                <!-- BiHPF Results Card -->
+                <div class="result-card">
+                    <h3>BiHPF Analysis</h3>
+                    <p>Result: <span id="bihpf-result"></span></p>
+                    <p>Confidence: <span id="bihpf-confidence"></span></p>
+                </div>
+
+                <!-- CapsNet Results Card -->
+                <div class="result-card">
+                    <h3>CapsNet Analysis</h3>
+                    <p>Result: <span id="capsnet-result"></span></p>
+                    <p>Confidence: <span id="capsnet-confidence"></span></p>
+                </div>
+
+                <!-- Keras Results Card -->
+                <div class="result-card">
+                    <h3>Keras Model Analysis</h3>
+                    <p>Result: <span id="keras-result"></span></p>
+                    <p>Confidence: <span id="keras-confidence"></span></p>
+                </div>
+
+                <!-- Final Verdict Card -->
+                <div class="result-card final-result">
+                    <h3>Final Verdict</h3>
+                    <p>Result: <span id="final-result"></span></p>
+                    <p>Confidence: <span id="final-confidence"></span></p>
+                    <p>Based on: <span id="winning-method"></span></p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

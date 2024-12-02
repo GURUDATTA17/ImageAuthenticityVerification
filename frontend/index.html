@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Image Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fake Image Detection</h1>
+        <p>Upload an image to determine if it is Real or Fake using advanced image processing techniques like Capsule Networks and BiHPF.</p>
+        <div class="upload-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="uploadButton" onclick="predictImage()">Upload and Predict</button>
+        </div>
+        <div id="results" class="results">
+            <h2>Prediction Results</h2>
+            <p id="bihpfResult"></p>
+            <p id="capsnetResult"></p>
+            <p id="finalResult"></p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
